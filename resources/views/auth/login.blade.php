@@ -82,7 +82,7 @@
 
 @section('content')
     <div class="container">
-        <div class="card card-login mt-5 me-lg-5 ms-lg-5">
+        <div class="card card-login mt-5 me-lg-5 ms-lg-5 mb-3">
             <div class="card-body">
                 <main class="form-signin w-100 m-auto">
                     <form method="POST" action="{{ route('auth.login') }}" id="login-form">
