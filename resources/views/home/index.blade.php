@@ -1,7 +1,4 @@
 @extends('layouts.home')
-<style>
-
-</style>
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-Nn4QhuwRpfF+8Fe3PV1DhV2AsZ/Wh25onfdwFFSvDzBGy9v3jxVNxl6EPsm1B6pXGOJHs3ucJT7v56wHl9gyUw=="

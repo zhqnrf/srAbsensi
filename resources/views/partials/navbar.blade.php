@@ -1,4 +1,9 @@
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+<style>
+    .navbar-brand {
+        color: white;
+    }
+</style>
+<header class="navbar  sticky-top flex-md-nowrap p-0 shadow" style="background-color: #760712">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 py-3 px-3 fs-6" href=""><img
             src="{{ asset('assets/logoWhite.png') }}" alt="" style="height: 30px"> SR Absensi</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed border-0" type="button" data-bs-toggle="collapse"
