@@ -1,6 +1,11 @@
-import { builtValidationElement, fetchWithToken } from "../utils.js";
+import {
+    builtValidationElement,
+    fetchWithToken
+} from "../utils.js";
 import toast from "../toast.js";
-import { setLoadingButton } from "../loading.js";
+import {
+    setLoadingButton
+} from "../loading.js";
 
 const loginForm = document.getElementById("login-form");
 
@@ -10,7 +15,10 @@ loginForm.addEventListener("submit", async function (e) {
     const formData = new FormData(this);
 
     setLoadingButton(loginFormButton, true);
-    const { res, data } = await fetchWithToken(this.action, {
+    const {
+        res,
+        data
+    } = await fetchWithToken(this.action, {
         method: "POST",
         body: formData,
     });
@@ -41,4 +49,18 @@ loginForm.addEventListener("submit", async function (e) {
         });
         window.location.assign(data.redirect_to);
     }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const passwordField = document.getElementById('floatingPassword');
+    const togglePassword = document.querySelector('.toggle-password');
+
+    togglePassword.addEventListener('click', function () {
+        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', type);
+
+        // Toggle eye icon
+        this.classList.toggle('eye');
+        this.classList.toggle('eye-slash');
+    });
 });

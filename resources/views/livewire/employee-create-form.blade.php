@@ -5,13 +5,13 @@
             <div class="mb-3">
                 <div class="w-100">
                     <div class="mb-3">
-                        <x-form-label id="name{{ $i }}" label='Nama Mahasantri {{ $i + 1 }}' />
+                        <x-form-label id="name{{ $i }}" label='Nama Pengguna {{ $i + 1 }}' />
                         <x-form-input id="name{{ $i }}" name="name{{ $i }}"
                             wire:model.defer="employees.{{ $i }}.name" />
                         <x-form-error key="employees.{{ $i }}.name" />
                     </div>
                     <div class="mb-3">
-                        <x-form-label id="email{{ $i }}" label='Email Mahasantri {{ $i + 1 }}' />
+                        <x-form-label id="email{{ $i }}" label='Email Pengguna {{ $i + 1 }}' />
                         <x-form-input id="email{{ $i }}" name="email{{ $i }}" type="email"
                             wire:model.defer="employees.{{ $i }}.email" placeholder="Email aktif" />
                         <x-form-error key="employees.{{ $i }}.email" />
@@ -24,15 +24,14 @@
                     </div>
                     <div class="mb-3">
                         <x-form-label id="password{{ $i }}"
-                            label='Password Mahasantri {{ $i + 1 }} (default: "123" jika tidak diisi)'
+                            label='Password Pengguna {{ $i + 1 }} (default: "123" jika tidak diisi)'
                             required="false" />
                         <x-form-input id="password{{ $i }}" name="password{{ $i }}"
                             wire:model.defer="employees.{{ $i }}.password" required="false" />
                         <x-form-error key=" employees.{{ $i }}.password" />
                     </div>
                     <div class="mb-3">
-                        <x-form-label id="position_id{{ $i }}"
-                            label='Jabatan / Posisi Mahasantri {{ $i + 1 }}' />
+                        <x-form-label id="position_id{{ $i }}" label='Role Pengguna {{ $i + 1 }}' />
                         <select class="form-select" aria-label="Default select example" name="position_id"
                             wire:model.defer="employees.{{ $i }}.position_id">
                             <option selected disabled>-- Pilih Posisi --</option>

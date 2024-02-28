@@ -166,7 +166,7 @@ final class PositionTable extends PowerGridComponent
                 ->searchable()
                 ->sortable(),
 
-            Column::make('Name', 'name')
+            Column::make('Nama', 'name')
                 ->searchable()
                 ->makeInputText('name')
                 ->sortable(),

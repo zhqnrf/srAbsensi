@@ -18,7 +18,7 @@
                         @method('DELETE')
                         @csrf
 
-                        <button class="btn fw-bold btn-danger w-100">Keluar</button>
+                        <button class="btn fw-bold btn-danger w-100 mt-3">Keluar</button>
                     </form>
                 </li>
             </ul>

@@ -59,7 +59,7 @@ final class EmployeeTable extends PowerGridComponent
 
             try {
                 User::whereIn('id', $ids)->delete();
-                $this->dispatchBrowserEvent('showToast', ['success' => true, 'message' => 'Data Mahasantri berhasi dihapus.']);
+                $this->dispatchBrowserEvent('showToast', ['success' => true, 'message' => 'Data Pengguna berhasi dihapus.']);
             } catch (\Illuminate\Database\QueryException $ex) {
                 $this->dispatchBrowserEvent('showToast', ['success' => false, 'message' => 'Data gagal dihapus, kemungkinan ada data lain yang menggunakan data tersebut.']);
             }
@@ -187,7 +187,7 @@ final class EmployeeTable extends PowerGridComponent
                 ->searchable()
                 ->sortable(),
 
-            Column::make('Name', 'name', 'users.name')
+            Column::make('Nama', 'name', 'users.name')
                 ->searchable()
                 ->makeInputText()
                 ->editOnClick()

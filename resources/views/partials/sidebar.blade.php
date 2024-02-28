@@ -20,7 +20,7 @@
                     <a class="nav-link {{ request()->routeIs('employees.*') ? 'active' : '' }}"
                         href="{{ route('employees.index') }}">
                         <span data-feather="users" class="align-text-bottom"></span>
-                        Mahasantri
+                        Data Pengguna
                     </a>
                 </li>
                 <li class="nav-item">
@@ -51,7 +51,9 @@
             onsubmit="return confirm('Apakah anda yakin ingin keluar?')">
             @method('DELETE')
             @csrf
-            <button class="w-full mt-4 d-block bg-transparent border-0 fw-bold text-danger px-3">Keluar</button>
+            <button class="w-full mt-4 d-block bg-transparent border-0 fw-bold text-danger px-3"><i
+                    class="fas fa-sign-out-alt"></i>
+                Keluar</button>
         </form>
     </div>
 </nav>
