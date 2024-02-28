@@ -1,14 +1,10 @@
 @extends('layouts.home')
 @section('content')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-Nn4QhuwRpfF+8Fe3PV1DhV2AsZ/Wh25onfdwFFSvDzBGy9v3jxVNxl6EPsm1B6pXGOJHs3ucJT7v56wHl9gyUw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <div class="container py-5">
         <div class="row">
             <div class="col-md-4 mb-3">
                 <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
+                    <div class="card-header fw-bold text-white" style="background-color: #760712">
                         <i class="fas fa-user me-2"></i> Informasi Mahasantri
                     </div>
                     <div class="card-body">
@@ -47,7 +43,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card shadow-sm mb-2">
-                    <div class="card-header bg-primary text-white">
+                    <div class="card-header fw-bold" style="background-color:#e0cc8d; color:#760712; ">
                         <i class="fas fa-calendar-check me-2"></i> Daftar Absensi Hari Ini
                     </div>
                     <div class="card-body">

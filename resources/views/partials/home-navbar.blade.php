@@ -25,7 +25,7 @@
                         @csrf
 
                         <button class="btn fw-bold w-100 mt-1"
-                            style="color: white; background-color: #e0cc8d">Keluar</button>
+                            style="color: #760712; background-color: #e0cc8d">Keluar</button>
                     </form>
                 </li>
             </ul>
