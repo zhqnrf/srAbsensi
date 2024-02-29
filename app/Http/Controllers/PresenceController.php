@@ -12,13 +12,19 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PresenceController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $attendances = Attendance::all()->sortByDesc('data.is_end')->sortByDesc('data.is_start');
+        $query = $request->input('search');
+
+        $attendances = Attendance::where('title', 'like', "%$query%")
+            ->orWhere('description', 'like', "%$query%")
+            ->orderByDesc('created_at') // Ganti dengan kolom yang sesuai dengan kebutuhan Anda
+            ->get();
+
 
         return view('presences.index', [
             "title" => "Daftar Absensi Dengan Kehadiran",
-            "attendances" => $attendances
+            "attendances" => $attendances,
         ]);
     }
 

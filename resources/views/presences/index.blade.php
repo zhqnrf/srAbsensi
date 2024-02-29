@@ -4,6 +4,16 @@
     @include('partials.alerts')
 
     <div class="row">
+        <div class="col-md-12 mb-3 ">
+            <form action="{{ route('presences.index') }}" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari berdasarkan title atau deskripsi"
+                        name="search" value="{{ request('search') }}">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i>
+                        Cari</button>
+                </div>
+            </form>
+        </div>
         <div class="col-md-12">
             <ul class="list-group">
                 @foreach ($attendances as $attendance)
